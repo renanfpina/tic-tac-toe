@@ -70,8 +70,9 @@ class Game extends React.Component {
       stepNumber: history.length,
       xIsNext: !this.state.xIsNext,
     });
+    //console.log(squares.every(elem => elem !== null));
   }
- 
+
   jumpTo(step) {
     this.setState({
       stepNumber: step,
@@ -97,6 +98,8 @@ class Game extends React.Component {
     let status;
     if (winner) {
       status = 'Vencedor: ' + winner;
+    } else if (current.squares.every(elem => elem !== null)) {
+      status = 'Deu velha!';
     } else {
       status = 'Próximo jogador: ' + (this.state.xIsNext ? 'X' : 'O');
     }
