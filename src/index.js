@@ -24,19 +24,19 @@ class Board extends React.Component {
     return (
       <div>
         <div className="board-row">
-          {this.renderSquare(0)}
-          {this.renderSquare(1)}
-          {this.renderSquare(2)}
+          <span className="context">Casa 1</span>{this.renderSquare(0)}
+          <span className="context">Casa 2</span>{this.renderSquare(1)}
+          <span className="context">Casa 3</span>{this.renderSquare(2)}
         </div>
         <div className="board-row">
-          {this.renderSquare(3)}
-          {this.renderSquare(4)}
-          {this.renderSquare(5)}
+          <span className="context">Casa 4</span>{this.renderSquare(3)}
+          <span className="context">Casa 5</span>{this.renderSquare(4)}
+          <span className="context">Casa 6</span>{this.renderSquare(5)}
         </div>
         <div className="board-row">
-          {this.renderSquare(6)}
-          {this.renderSquare(7)}
-          {this.renderSquare(8)}
+          <span className="context">Casa 7</span>{this.renderSquare(6)}
+          <span className="context">Casa 8</span>{this.renderSquare(7)}
+          <span className="context">Casa 9</span>{this.renderSquare(8)}
         </div>
       </div>
     );
@@ -56,6 +56,7 @@ class Game extends React.Component {
   }
 
   handleClick(i) {
+    statusFocus("status");
     const history = this.state.history.slice(0, this.state.stepNumber +1);
     const current = history[history.length - 1];
     const squares = current.squares.slice();
@@ -74,6 +75,7 @@ class Game extends React.Component {
   }
 
   jumpTo(step) {
+    statusFocus("status");
     this.setState({
       stepNumber: step,
       xIsNext: (step % 2) === 0,
@@ -86,8 +88,8 @@ class Game extends React.Component {
     const winner = calculateWinner(current.squares);
     const moves = history.map((step, move) => {
       const desc = move ?
-        'Vá para jogada #' + move :
-        'Vá para o início do jogo';
+        'Ir para jogada #' + move :
+        'Ir para o início do jogo';
       return (
         <li key={move}>
           <button onClick={() => this.jumpTo(move)}>{desc}</button>
@@ -106,6 +108,7 @@ class Game extends React.Component {
 
     return (
       <div className="game">
+        <div id="status" tabIndex="0">{status}</div>
         <div className="game-board">
           <Board 
             squares={current.squares}
@@ -113,7 +116,6 @@ class Game extends React.Component {
           />
         </div>
         <div className="game-info">
-          <div>{status}</div>
           <ol>{moves}</ol>
         </div>
       </div>
@@ -147,5 +149,7 @@ function calculateWinner(squares) {
     }
     return null;
   }
-  
-  
+
+  function statusFocus(id) {
+    document.getElementById(id).focus();
+  }

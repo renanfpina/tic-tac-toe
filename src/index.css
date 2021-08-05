@@ -48,4 +48,9 @@ body {
   .game-info {
     margin-left: 20px;
   }
-  
+
+  .context {
+    position:absolute;
+    left: -9999;
+    top: -9999;
+  }
