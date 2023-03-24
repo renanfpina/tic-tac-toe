@@ -35,9 +35,9 @@ This is a simple tic-tac-toe game with possibility to navigate in timeline moves
 
 ## Links
 - [Live deploy](https://renanfpina.github.io/tic-tac-toe)
-- React tutorial documentation: [https://reactjs.org/tutorial/tutorial.html](https://reactjs.org/tutorial/tutorial.html)
-- Repository: [https://github.com/renanfpina/tic-tac-toe.git](https://github.com/renanfpina/tic-tac-toe.git)
-- My website: [http://www.renanpina.com.br](http://www.renanpina.com.br)
+- [React tutorial documentation](https://reactjs.org/tutorial/tutorial.html)
+- [Git Repository](https://github.com/renanfpina/tic-tac-toe.git)
+- [My website](http://www.renanpina.com.br)
 
 
 ## Versioning
