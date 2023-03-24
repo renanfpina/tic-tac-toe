@@ -30,12 +30,11 @@ This is a simple tic-tac-toe game with possibility to navigate in timeline moves
 - Show the timeline moves.
 - Rewind and forward in timeline moves.
 - Rewind moves and play a new history in timeline.
-- Accessibility game to screen readers.  
-  
+- Accessibility game to screen readers.
+
 
 ## Links
-- [Live deploy]
-(https://renanfpina.github.io/tic-tac-toe)
+- [Live deploy](https://renanfpina.github.io/tic-tac-toe)
 - React tutorial documentation: [https://reactjs.org/tutorial/tutorial.html](https://reactjs.org/tutorial/tutorial.html)
 - Repository: [https://github.com/renanfpina/tic-tac-toe.git](https://github.com/renanfpina/tic-tac-toe.git)
 - My website: [http://www.renanpina.com.br](http://www.renanpina.com.br)
